@@ -1,14 +1,21 @@
-# pweb-tugas-6
+# Repository Penugasan 6 PWEB G
 
-This template should help get you started developing with Vue 3 in Vite.
+Oleh:
+
+Ainun Nadhifah Syamsiyah (5025221053)
+
+## Deskripsi Tugas
+
+Membuat kalkulator sederhana dengan Vue JS
+
+## Demo
+
+- Live demo:
+- Screenshots
 
 ## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur)
 
 ## Project Setup
 
