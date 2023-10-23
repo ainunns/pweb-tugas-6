@@ -1,85 +1,58 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <main>
+    <header>
+      <h1>Create a simple calculator using Vue JS</h1>
+      <form @submit.prevent="calculate">
+        <label for="firstNumber">First Number: </label>
+        <input v-model="firstNumber" type="number" />
+        <br />
+        <label for="operator">Operator: </label>
+        <select v-model="operator">
+          <option value="+">tambah (+)</option>
+          <option value="-">kurang (-)</option>
+          <option value="*">kali (*)</option>
+          <option value="/">bagi (/)</option>
+        </select>
+        <br />
+        <label for="secondNumber">Second Number: </label>
+        <input v-model="secondNumber" type="number" />
+        <br />
+        <button type="submit">hitung</button>
+      </form>
+      <p>Hasil perhitungan = {{ result }}</p>
+    </header>
+  </main>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
+<script>
+export default {
+  data() {
+    return {
+      firstNumber: 0,
+      operator: '+',
+      secondNumber: 0,
+      result: 0
+    }
+  },
+  methods: {
+    calculate() {
+      switch (this.operator) {
+        case '+':
+          this.result = this.firstNumber + this.secondNumber
+          break
+        case '-':
+          this.result = this.firstNumber - this.secondNumber
+          break
+        case '*':
+          this.result = this.firstNumber * this.secondNumber
+          break
+        case '/':
+          this.result = this.firstNumber / this.secondNumber
+          break
+        default:
+          this.result = 'Invalid operator'
+      }
+    }
   }
 }
-</style>
+</script>
