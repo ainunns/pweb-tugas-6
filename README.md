@@ -10,8 +10,9 @@ Membuat kalkulator sederhana dengan Vue JS
 
 ## Demo
 
-- Live demo:
+- Live demo: [https://tugas-6-simple-vue-calculator.vercel.app/](https://tugas-6-simple-vue-calculator.vercel.app/)
 - Screenshots
+  ![image](https://github.com/ainunns/pweb-tugas-6/assets/58164571/fad9073a-2b3e-4040-9c5e-9c7592a9c04e)
 
 ## Recommended IDE Setup
 
